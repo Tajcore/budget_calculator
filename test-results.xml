@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="60.0010" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2020-11-11T16:07:52" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="GET /user" timestamp="2020-11-11T16:07:52" tests="1" file="C:\Users\Tajcore\Documents\Web Apps\budget_calculator\_tests_\route_api\api_test.js" time="60.0010" failures="1">
+    <testcase name="GET /user &quot;before all&quot; hook for &quot;Fetching existing User by IP(create user if doesn&apos;t exist)&quot;" time="60.0010" classname="&quot;before all&quot; hook for &quot;Fetching existing User by IP(create user if doesn&apos;t exist)&quot;">
+      <failure message="Timeout of 60000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\Tajcore\Documents\Web Apps\budget_calculator\_tests_\route_api\api_test.js)" type="Error"><![CDATA[Error: Timeout of 60000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\Tajcore\Documents\Web Apps\budget_calculator\_tests_\route_api\api_test.js)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

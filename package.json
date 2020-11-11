@@ -4,10 +4,18 @@
   "description": "A simple budget calculator using the MERN stack",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha '_tests_/**/*.js' --recursive --timeout 100000 --exit"
+  },
   "dependencies": {
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.13"
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mockgoose": "^8.0.4",
+    "mongoose": "^5.10.13",
+    "supertest": "^6.0.1"
   }
 }

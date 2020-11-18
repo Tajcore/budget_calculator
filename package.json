@@ -6,9 +6,13 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha '_tests_/**/*.js' --recursive --timeout 100000 --exit",
+    "build" : "cd client2 && run build",
+    "install-client": "cd client2 & yarn install",
     "server": "nodemon server.js",
     "client": "cd client2 && yarn start --prefix client",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "yarn run install-client && yarn run build"
   },
   "dependencies": {
     "chai": "^4.2.0",
@@ -22,5 +26,9 @@
     "mongoose": "^5.10.13",
     "nodemon": "^2.0.6",
     "supertest": "^6.0.1"
-  }
+  },
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.22.5"
+}
 }

@@ -22,7 +22,7 @@ function App() {
       setUserIP((oldIP) => data["ip"]);
       if(userIP){
         dispatch({ type: actions.SET_IP, payload: userIP });
-        axios.post("http://localhost:5000/api/user", {'ip': userIP}).then((res) => 
+        axios.post("/api/user", {'ip': userIP}).then((res) => 
         dispatch({type: actions.SET_ID, payload: res.data._id}) )
       }
     }

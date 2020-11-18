@@ -150,7 +150,7 @@ const BudgetCalculator = () => {
     const total = totalIncome + totalExpense;
     setLoading(true);
     axios
-      .post("http://localhost:5000/api/budget", {
+      .post("/api/budget", {
         id: state.id,
         total_profit: total,
         incomes: incomes,

@@ -22,7 +22,7 @@ const BudgetSummary = () => {
 
   const { id } = useParams();
   const { data, loading } = useFetch(
-    "http://localhost:5000/api/budget?id=" + id
+    "/api/budget?id=" + id
   );
   const [summary, setSummary] = useState("")
   const [incomePie, setIncomePie] = useState({});

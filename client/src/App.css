@@ -1,0 +1,17 @@
+@import url('./layouts/Sidebar.css');
+
+
+.App{
+  display: grid;
+  grid-template-columns: 81% 19%;
+  grid-template-rows: 100vh;
+  grid-template-areas: 
+  "main sidebar";
+}
+
+@media (max-width: 767.98px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+}

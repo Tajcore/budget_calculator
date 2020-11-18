@@ -1,24 +1,21 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const Budget = mongoose.Schema;
-
-const budgetModel = new Budget({
-  savings: {
-    type: Number,
-    require: true,
-  },
-  income: {
-    type: Number,
-    require: true,
-  },
-  expenses: {
-    type: Number,
-    require: true,
-  },
-  user: {
-      type: Budget.Types.ObjectId,
-      ref: "userModel"
-  }
+const Budget = new Schema({
+  total_profit: { type: Number, required: true },
+  expenses: [
+    {
+      description: { type: String, required: true },
+      value: { type: Number, required: true },
+    },
+  ],
+  incomes: [
+    {
+      description: { type: String, required: true },
+      value: { type: Number, required: true },
+    },
+  ],
+  date_submitted: { type: Date, required: true },
 });
 
-module.exports = mongoose.model("budgetModel", budgetModel);
+module.exports = mongoose.model("Budget", Budget);

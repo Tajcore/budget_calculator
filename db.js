@@ -22,11 +22,16 @@ const connect = function () {
       });
     } else {
       mongoose
-        .connect(DB_URI, { useNewUrlParser: true, useCreateIndex: true })
-        .then((res, err) => {
-          if (err) return reject(err);
-          resolve();
-        });
+        .connect(DB_URI, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+          useCreateIndex: true,
+        }).then(()=>resolve())
+        .catch((err) => console.error(err));
+
+      const db = mongoose.connection;
+
+      db.on("error", console.error.bind(console, "Connection error:"));
     }
   });
 };

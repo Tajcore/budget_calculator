@@ -1,0 +1,121 @@
+.side-bar {
+  grid-area: sidebar;
+  background-color: #f9fafc;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 60% 20%;
+  justify-content: center;
+}
+
+.side-bar .side-bar-title {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.side-bar .side-bar-title > * {
+  margin: 0.4vw;
+}
+.side-bar .side-bar-title .text {
+  font-size: 1.85vw;
+  font-weight: 600;
+}
+
+.side-bar .side-bar-title img {
+  width: 1.6775vw;
+  height: 1.6775vw;
+}
+
+.side-bar .budget-listings {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  justify-content: center;
+}
+
+.side-bar .budget-listings .budget-template {
+  background-color: #f1f2f7;
+  margin: 0px 1vw 0.4vw 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.side-bar .budget-listings .budget-template:hover {
+  background-color: #dbdbdf;
+}
+
+.side-bar .budget-listings:last-child {
+  margin-bottom: 0px;
+}
+.side-bar .budget-listings .budget-template > * {
+  margin: 0.4vw;
+}
+
+.side-bar .budget-listings .budget-template .month {
+  height: 2.7vw;
+  width: 2.7vw;
+  background-color: #5bc980;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-size: 2.2vw;
+  font-weight: 600;
+  color: #ffff;
+}
+.side-bar .budget-listings .budget-template .date .text {
+  font-weight: 400;
+  font-size: 1.4vw;
+}
+
+.side-bar .budget-listings .budget-template .date .value .text-bold {
+  font-weight: bold;
+}
+.side-bar .budget-listings .budget-template .date .value > .text,
+.text-bold {
+  font-size: 0.9vw;
+}
+.side-bar .budget-listings .budget-template .date .value {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bar .budget-commands {
+  justify-self: center;
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+  .side-bar {
+    grid-gap: 1rem;
+  }
+  .side-bar .budget-listings {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    justify-content: center;
+  }
+  .side-bar .side-bar-title img {
+    width: 2.3775vw;
+    height: 2.3775vw;
+  }
+  .side-bar .side-bar-title .text {
+    font-size: 2.45vw;
+    font-weight: 600;
+  }
+
+  .side-bar .budget-listings .budget-template .month {
+  }
+
+  .side-bar .budget-listings .budget-template .date .text {
+    font-weight: 400;
+    font-size: 1.8vw;
+  }
+  .side-bar .budget-listings .budget-template .date .value > .text,
+  .text-bold {
+    font-size: 1.3vw;
+  }
+}

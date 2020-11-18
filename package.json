@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha '_tests_/**/*.js' --recursive --timeout 100000 --exit",
-    "build" : "yarn run build",
-    "install-client": "cd client2 & yarn install",
+    "build" : "cd client2 && yarn run build",
+    "install-client": "cd client2 && yarn install",
     "server": "nodemon server.js",
     "client": "cd client2 && yarn start --prefix client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
